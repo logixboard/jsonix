@@ -6,7 +6,7 @@ Jsonix.Util={};
 Jsonix.Util.extend=function(f,g){f=f||{};
 if(g){for(var h in g){var e=g[h];
 if(e!==undefined){f[h]=e
-}}sourceIsEvt=typeof window!=="undefined"&&window!==null&&typeof window.Event==="function"&&g instanceof window.Event;
+}}var sourceIsEvt=typeof window!=="undefined"&&window!==null&&typeof window.Event==="function"&&g instanceof window.Event;
 if(!sourceIsEvt&&g.hasOwnProperty&&g.hasOwnProperty("toString")){f.toString=g.toString
 }}return f
 };
